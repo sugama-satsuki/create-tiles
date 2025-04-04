@@ -1,0 +1,4 @@
+*.lua
+*.json
+*.pbf
+.DS_Store
