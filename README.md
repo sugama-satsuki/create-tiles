@@ -7,9 +7,9 @@
 ./pbf2mbtiles.sh
 ```
 
-### pbf2zxy
-1. pbfディレクトリに変換したいファイルを配置。
-2. 以下を実行すると、result_zxyディレクトリにzxy形式のタイルが生成されます。
+### mbtiles2xyz
+1. mbtilesディレクトリに変換したいファイルを配置。
+2. 以下を実行すると、xyzディレクトリにxyz形式のタイルが生成されます。
 ```
-./pbf2zxy.sh
+./mbtiles2xyz.sh
 ```
