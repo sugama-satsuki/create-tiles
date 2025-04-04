@@ -29,4 +29,4 @@ time tilemaker \
   --input ${pbf} \
   --config config/${CONFIG_NAME}.json \
   --process config/${CONFIG_NAME}.lua \
-  --output mbtiles/${pbf%.osm.pbf}.mbtiles
+  --output mbtiles/${FILE_NAME}.mbtiles

@@ -2,3 +2,5 @@
 *.json
 *.pbf
 .DS_Store
+*.mbtiles
+xyz/*
