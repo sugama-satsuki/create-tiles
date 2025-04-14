@@ -37,4 +37,4 @@ done
 TS_FILE="uploadToS3.ts"
 
 # ts-nodeを使用してTypeScriptを実行
-npx ts-node "$TS_FILE" "$S3_BUCKET_NAME" "$REGION_NAME" "$DIRECTORY_NAME"
+npx ts-node "$TS_FILE" "$S3_BUCKET_NAME" "$REGION_NAME" "$DIRECTORY_NAME" "$SUB_DIR_NAME"
