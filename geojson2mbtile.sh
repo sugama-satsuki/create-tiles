@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# geojson2mbtile: GeoJSONをMBTilesに変換するスクリプト（tippecanoeを使用）
+# geojson2mbtile: GeoJSONをMBTilesに変換するスクリプト
 
 # 入力ディレクトリと出力ディレクトリを定義
 GEOJSON_DIR="geojson"
@@ -40,7 +40,7 @@ for GEOJSON_FILE in "$GEOJSON_DIR"/*.geojson; do
 
   # GeoJSONをMBTilesに変換
   echo "変換中: $GEOJSON_FILE -> $MBTILES_FILE"
-  tippecanoe -o "$MBTILES_FILE" "$GEOJSON_FILE" --force --maximum-zoom=14 --minimum-zoom=5
+  tippecanoe -o "$MBTILES_FILE" "$GEOJSON_FILE" --force --maximum-zoom=14 --no-feature-limit --no-tile-size-limit
 
   if [ $? -eq 0 ]; then
     echo "変換成功: $MBTILES_FILE"

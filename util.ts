@@ -1,10 +1,25 @@
 import * as fs from "fs";
 import * as path from "path";
 import { S3Client, PutObjectCommand } from "@aws-sdk/client-s3";
+import { fromIni } from "@aws-sdk/credential-providers";
 
 
 // S3クライアントの作成
-const s3Client = new S3Client({ region: "ap-northeast-1" });
+let s3Client = new S3Client({ 
+    region: "ap-northeast-1",
+    credentials: fromIni({ profile: "781917250095_AdministratorAccess" })
+});
+
+async function refreshCredentials() {
+    s3Client = new S3Client({
+        region: "ap-northeast-1",
+        credentials: fromIni({ profile: "781917250095_AdministratorAccess" }),
+    });
+    console.log("Credentials refreshed");
+}
+
+// 定期的に認証情報を更新（例: 1時間ごと）
+setInterval(refreshCredentials, 60 * 60 * 1000);
 
 /**
  * 指定されたローカルディレクトリをS3にアップロードする関数
