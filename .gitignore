@@ -5,3 +5,10 @@
 *.mbtiles
 xyz/*
 node_modules/*
+shape/*
+mbtiles/*
+*.mbtiles
+*.geojson
+geojson/*
+csv/*
+config/*
